@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Precense Test</title>
+	<script src="https://sdk.pushy.me/web/1.0.1/pushy-sdk.js"></script>
+    <script src="static/contrib/app.js"></script>
+</head>
+<body>
+	<div style="margin: 100px 100px;">
+		<h1>Precense Test</h1>
+		<form action="" method="POST">
+			{% csrf_token %}
+			<label>Device ID</label>
+			<input type="text" name="device">
+			<button>Submit</button>
+		</form>
+	</div>
+	{% if response %}
+		<div style="margin: 100px 100px;">
+			{{response}}
+		</div>
+	{% endif %}
+
+</body>
+</html>
